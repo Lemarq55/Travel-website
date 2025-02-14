@@ -132,3 +132,16 @@ footer {
         padding: 120px 15px;
     }
 }
+/* Ensure all section titles are centered */
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Ensure all section text is properly aligned */
+section {
+    text-align: center;
+}
