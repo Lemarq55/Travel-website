@@ -3,14 +3,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('https://source.unsplash.com/1600x900/?travel') no-repeat center center/cover;
+    background: url('https://source.unsplash.com/1600x900/?travel,adventure') no-repeat center center/cover;
+    background-size: cover;
     color: white;
     text-align: center;
 }
 
-/* Header */
+/* Navigation Menu */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     position: fixed;
     width: 100%;
@@ -33,11 +34,29 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: orange;
+    border-radius: 5px;
 }
 
 /* Sections */
 section {
     padding: 100px 20px;
+    min-height: 100vh;
+}
+
+/* About & Services Section */
+#about, #services {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 80%;
 }
 
 /* Contact Form */
@@ -66,4 +85,20 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 18px;
+}
+
+button:hover {
+    background: darkorange;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
