@@ -54,7 +54,6 @@ nav ul li a:hover {
 /* Sections */
 section {
     padding: 150px 20px 100px;
-}
     min-height: 100vh;
 }
 
@@ -158,7 +157,6 @@ footer {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
 }
-
 .about-box {
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
