@@ -1,27 +1,17 @@
-/* Color Variables */
-:root {
-    --deep-ocean-blue: #013A63;
-    --sandy-beige: #F4E1D2;
-    --sunset-orange: #FF4500;
-    --seafoam-green: #2E8B57;
-    --driftwood-gray: #A9A9A9;
-    --cloud-white: #F5F5F5;
-}
-
-/* General Styles */
+/* General Luxury Theme */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--sandy-beige);
-    color: var(--deep-ocean-blue);
+    background-color: #F4E1D2; /* Soft Beige */
+    color: #1C3D5A; /* Deep Ocean Blue */
     text-align: center;
 }
 
 /* Navigation Menu */
 header {
-    background-color: var(--deep-ocean-blue);
-    padding: 1rem;
+    background: rgba(28, 61, 90, 0.9); /* Elegant Dark Blue */
+    padding: 1.5rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -31,103 +21,83 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: var(--cloud-white);
+    color: #F5F5F5;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
-    padding: 8px 15px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: 0.3s;
     border-radius: 5px;
 }
 
 nav ul li a:hover {
-    background-color: var(--sunset-orange);
-    color: var(--deep-ocean-blue);
+    background: #E8A87C; /* Warm Luxury Gold */
+    color: #1C3D5A;
 }
 
 /* Sections */
 section {
-    padding: 150px 20px 100px;
-    min-height: 100vh;
-    background-color: var(--cloud-white);
-    color: var(--deep-ocean-blue);
+    padding: 120px 20px;
+    text-align: center;
+    background: white;
+    margin: 40px auto;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-/* Background image for the Home section */
+
+/* Background Images for Sections */
 #home {
-    background: url('https://source.unsplash.com/1600x900/?surf,ocean') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1518481612320-88867dc78ae8') no-repeat center center/cover;
     padding: 200px 20px;
     color: white;
+    font-size: 24px;
 }
 
-/* Background image for the About Us section */
-#about {
-    background: url('https://source.unsplash.com/1600x900/?travel,beach') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: white;
+#about, #services, #contact {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 80px 20px;
 }
 
-/* Background image for the Services section */
-#services {
-    background: url('https://source.unsplash.com/1600x900/?adventure,surfboard') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: white;
+/* Luxury Section Images */
+.section-image {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Background image for the Contact section */
-#contact {
-    background: url('https://source.unsplash.com/1600x900/?ocean,boat') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: white;
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    background-color: var(--driftwood-gray);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid var(--deep-ocean-blue);
-    border-radius: 5px;
-}
-
+/* Luxury Buttons */
 button {
-    background-color: var(--sunset-orange);
-    color: var(--cloud-white);
-    padding: 10px;
+    background: #E8A87C; /* Elegant Gold */
+    color: #1C3D5A;
+    padding: 15px 25px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: var(--deep-ocean-blue);
+    background: #1C3D5A;
+    color: #E8A87C;
 }
 
 /* Footer */
 footer {
-    background-color: var(--deep-ocean-blue);
-    color: var(--cloud-white);
+    background: rgba(28, 61, 90, 0.9);
+    color: white;
     text-align: center;
     padding: 20px;
     position: relative;
@@ -135,7 +105,7 @@ footer {
     width: 100%;
 }
 
-/* Responsive Styles */
+/* Responsive Luxury Layout */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -146,19 +116,6 @@ footer {
     }
 
     section {
-        padding: 120px 15px;
+        width: 90%;
     }
-}
-/* Ensure all section titles are centered */
-h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Ensure all section text is properly aligned */
-section {
-    text-align: center;
 }
