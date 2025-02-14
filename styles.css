@@ -62,15 +62,32 @@ section {
     background-color: var(--cloud-white);
     color: var(--deep-ocean-blue);
 }
+/* Background image for the Home section */
+#home {
+    background: url('https://source.unsplash.com/1600x900/?surf,ocean') no-repeat center center/cover;
+    padding: 200px 20px;
+    color: white;
+}
 
-/* About & Services Section */
-#about, #services {
-    background-color: var(--seafoam-green);
-    padding: 50px;
-    border-radius: 10px;
-    margin: 30px auto;
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Background image for the About Us section */
+#about {
+    background: url('https://source.unsplash.com/1600x900/?travel,beach') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: white;
+}
+
+/* Background image for the Services section */
+#services {
+    background: url('https://source.unsplash.com/1600x900/?adventure,surfboard') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: white;
+}
+
+/* Background image for the Contact section */
+#contact {
+    background: url('https://source.unsplash.com/1600x900/?ocean,boat') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: white;
 }
 
 /* Contact Form */
