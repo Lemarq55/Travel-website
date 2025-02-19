@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F4E1D2; /* Soft Beige */
@@ -55,19 +55,6 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Background Images for Sections */
-#home {
-    background: url('https://images.unsplash.com/photo-1518481612320-88867dc78ae8') no-repeat center center/cover;
-    padding: 200px 20px;
-    color: white;
-    font-size: 24px;
-}
-
-#about, #services, #contact {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 80px 20px;
-}
-
 /* About Us Section */
 .about-container {
     display: flex;
@@ -78,7 +65,6 @@ section {
     margin-top: 20px;
 }
 
-/* Mission & Vision Boxes */
 .about-box {
     background: rgba(255, 255, 255, 0.95);
     padding: 20px;
@@ -102,21 +88,67 @@ section {
     margin-bottom: 15px;
 }
 
-/* Luxury Buttons */
+/* Services Section */
+#services {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 80px 20px;
+}
+
+/* Contact Form */
+#contact {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(240, 240, 240, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+input, textarea {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #1C3D5A;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px; /* Increased Message Box Size */
+    resize: vertical;
+}
+
 button {
-    background: #E8A87C; /* Elegant Gold */
-    color: #1C3D5A;
-    padding: 15px 25px;
+    background: #1C3D5A;
+    color: white;
+    padding: 15px;
     border: none;
     cursor: pointer;
-    border-radius: 8px;
-    font-size: 20px;
+    border-radius: 5px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #1C3D5A;
-    color: #E8A87C;
+    background: #E8A87C;
+    color: #1C3D5A;
 }
 
 /* Footer */
@@ -130,7 +162,7 @@ footer {
     width: 100%;
 }
 
-/* Responsive Luxury Layout */
+/* Responsive Styles */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
