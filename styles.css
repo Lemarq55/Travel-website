@@ -5,18 +5,17 @@ body {
     padding: 0;
     background-color: #F0EADC; /* Eggshell */
     color: #333333;
-    text-align: center;
 }
 
 /* Navigation Menu */
 header {
     background: #576238; /* Moss */
-    padding: 1.5rem;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav ul {
@@ -24,18 +23,15 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-}
-
-nav ul li {
-    margin: 0 20px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: #FFD95D; /* Mustard */
     text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 8px 15px;
     transition: 0.3s ease-in-out;
     border-radius: 5px;
 }
@@ -47,46 +43,75 @@ nav ul li a:hover {
 
 /* Sections */
 section {
-    padding: 100px 20px;
+    padding: 60px 20px; /* Reduced padding */
     text-align: center;
     background: white;
-    margin: 40px auto;
-    max-width: 1000px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Fixed Photo Gallery Section */
+/* About Section */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 280px; /* Reduced size */
+    text-align: center;
+    color: #576238;
+    font-size: 14px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.about-box img {
+    width: 100%;
+    max-width: 220px; /* Smaller image */
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Photo Gallery */
 #gallery {
     text-align: center;
-    padding: 50px 0;
-    background: #F0EADC; /* Eggshell Background */
+    padding: 40px 0; /* Reduced padding */
+    background: #F0EADC; /* Eggshell */
     width: 100%;
 }
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller grid */
     gap: 10px;
     padding: 20px;
-    width: 90%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
 }
 
 .gallery-container img {
     width: 100%;
-    height: 250px; /* Fixed height */
+    height: 200px; /* Smaller images */
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .gallery-container img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* ✅ Fixed Lightbox Modal */
+/* Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -103,8 +128,8 @@ section {
 
 .lightbox img {
     width: auto;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 85%;
+    max-height: 85%;
     border-radius: 10px;
 }
 
@@ -112,15 +137,38 @@ section {
     position: absolute;
     top: 20px;
     right: 30px;
-    font-size: 40px;
+    font-size: 35px;
     color: white;
     cursor: pointer;
 }
 
-/* ✅ Fixed Animation: Fade-in when scrolling */
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px; /* Smaller box */
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #576238;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Fade-in Animation */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -129,13 +177,17 @@ section {
     transform: translateY(0);
 }
 
-/* Footer */
-footer {
-    background: #576238;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    section {
+        width: 95%;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
