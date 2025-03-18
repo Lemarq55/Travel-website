@@ -56,107 +56,77 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* About Us Section */
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.about-box {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px;
-    border-radius: 12px;
-    max-width: 300px; /* Smaller size */
+/* Photo Gallery Section */
+#gallery {
     text-align: center;
-    color: #576238;
-    font-size: 16px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about-box:hover {
-    transform: scale(1.05);
-    background: #FFD95D;
-    color: #576238;
-}
-
-/* Mission & Vision Images */
-.about-image {
+    padding: 50px 0;
+    background: #F0EADC; /* Eggshell Background */
     width: 100%;
-    max-width: 250px; /* Smaller images */
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Services Section */
-#services {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 60px 20px;
-}
-
-/* Contact Form */
-#contact {
-    text-align: center;
-    padding: 50px 20px; /* Smaller Contact Us section */
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    width: 70%;
-    max-width: 450px; /* Smaller box */
-    margin: auto;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
-    background: rgba(240, 240, 240, 0.9);
-    padding: 15px;
-    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-container img {
     width: 100%;
-    max-width: 400px; /* Proportional */
-}
-
-input, textarea {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #576238;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-textarea {
-    height: 120px; /* Slightly larger */
-    resize: vertical;
-}
-
-button {
-    background: #576238;
-    color: white;
-    padding: 12px;
-    border: none;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
 }
 
-button:hover {
-    background: #FFD95D;
-    color: #576238;
+.gallery-container img:hover {
+    transform: scale(1.02);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Animation: Fade-in when scrolling */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer */
@@ -168,90 +138,4 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* Animations */
-.about-box, button, nav ul li a {
-    transition: 0.3s ease-in-out;
-}
-
-.about-box:hover {
-    transform: scale(1.05);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    section {
-        width: 90%;
-    }
-
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-box {
-        max-width: 100%; /* Ensures proper display on smaller screens */
-    }
-}
-/* Smooth Scroll Effect */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Fade-in effect on scroll */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-/* Make elements visible when they enter the viewport */
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Hover Effects */
-nav ul li a:hover {
-    background: #FFD95D;
-    color: #576238;
-    transform: scale(1.05);
-}
-
-.about-box:hover {
-    transform: scale(1.05);
-    background: #FFD95D;
-    color: #576238;
-    transition: 0.4s ease-in-out;
-}
-
-button:hover {
-    transform: scale(1.1);
-    background: #FFD95D;
-    color: #576238;
-}
-
-/* Smooth section entry animation */
-section {
-    animation: fadeIn 1.2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
