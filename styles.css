@@ -202,3 +202,56 @@ footer {
         max-width: 100%; /* Ensures proper display on smaller screens */
     }
 }
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in effect on scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Make elements visible when they enter the viewport */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+nav ul li a:hover {
+    background: #FFD95D;
+    color: #576238;
+    transform: scale(1.05);
+}
+
+.about-box:hover {
+    transform: scale(1.05);
+    background: #FFD95D;
+    color: #576238;
+    transition: 0.4s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #FFD95D;
+    color: #576238;
+}
+
+/* Smooth section entry animation */
+section {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
