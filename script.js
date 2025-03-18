@@ -1,23 +1,17 @@
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const section = document.querySelector(this.getAttribute('href'));
-        section.scrollIntoView({ behavior: 'smooth' });
-    });
-});
+// Scroll Animation: Fade-in effect when elements come into view
+document.addEventListener("DOMContentLoaded", function() {
+    const fadeElements = document.querySelectorAll('.fade-in');
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('message').value;
-
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
-        return;
+    function checkPosition() {
+        fadeElements.forEach(element => {
+            let position = element.getBoundingClientRect().top;
+            let windowHeight = window.innerHeight;
+            if (position < windowHeight - 100) {
+                element.classList.add('show');
+            }
+        });
     }
 
-    document.getElementById('response-message').innerText = "Message sent successfully!";
-    document.getElementById('contact-form').reset();
+    window.addEventListener('scroll', checkPosition);
+    checkPosition(); // Run the function once when the page loads
 });
