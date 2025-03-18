@@ -15,6 +15,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -26,7 +27,7 @@
         <p>Your next journey starts here!</p>
     </section>
 
-    <!-- About Us Section (With Mission & Vision) -->
+    <!-- About Us Section -->
     <section id="about" class="fade-in">
         <h2>About Us</h2>
         <p>We are a team of passionate travelers dedicated to creating unforgettable journeys.</p>
@@ -57,6 +58,25 @@
             <li>Exclusive Travel Experiences</li>
         </ul>
     </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="fade-in">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="https://source.unsplash.com/800x600/?ocean,travel" alt="Ocean View" onclick="openLightbox(this)">
+            <img src="https://source.unsplash.com/800x600/?island,paradise" alt="Island View" onclick="openLightbox(this)">
+            <img src="https://source.unsplash.com/800x600/?mountains,adventure" alt="Mountain View" onclick="openLightbox(this)">
+            <img src="https://source.unsplash.com/800x600/?beach,sunset" alt="Beach Sunset" onclick="openLightbox(this)">
+            <img src="https://source.unsplash.com/800x600/?sailing,boat" alt="Sailing Adventure" onclick="openLightbox(this)">
+            <img src="https://source.unsplash.com/800x600/?wildlife,nature" alt="Wildlife" onclick="openLightbox(this)">
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="fade-in">
