@@ -1,4 +1,14 @@
-// Scroll Animation: Fade-in effect when elements come into view
+// ✅ Fixed Lightbox Feature
+function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+// ✅ Fixed Scroll Animation
 document.addEventListener("DOMContentLoaded", function() {
     const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -13,5 +23,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.addEventListener('scroll', checkPosition);
-    checkPosition(); // Run the function once when the page loads
+    checkPosition(); // Run once when page loads
 });
